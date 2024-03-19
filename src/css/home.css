@@ -1,17 +1,89 @@
-/* Home.css */
+/* home.css */
 
 .home-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: calc(100vh - 100px); /* Adjust according to your header height */
-    background-color: #f8f8f8; /* Example background color */
+    align-items: center;
+    height: 100vh;
 }
 
-.home-container h1 {
-    font-size: 2.5rem;
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.card-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h1 {
+    margin: 0;
+    font-size: 24px;
     color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+}
+
+.card-content .role {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.card-content .tech-stack {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #999;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 20px;
+}
+
+.social-links a:last-child {
+    margin-right: 0;
+}
+
+.home-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 80%;
+    max-width: 600px; /* Adjust max-width as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-bg img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
 }

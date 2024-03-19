@@ -1,20 +1,184 @@
-/* About.css */
+/* about.css */
 
+
+
+/* Section title styling */
+.section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* About content styling */
+.about-content {
+    display: flex;
+}
+
+/* Image container styling */
+.image-container {
+    flex: 0 0 30%; /* Take up 30% of the available width */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Content styling */
+.content {
+    flex: 1; /* Take up remaining space */
+    padding-left: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Container styling */
 .about-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.about-container h2 {
-    font-size: 2rem;
-    color: #333;
+/* Section title styling */
+.section-title {
+    font-size: 28px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: left;
+    color: dodgerblue;
+    padding: 20;
 }
 
-.about-container p {
-    font-size: 1rem;
-    line-height: 1.5;
+/* Education row styling */
+.education-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+    margin: 0 -10px; /* Adjust for spacing */
+}
+
+/* Card container styling */
+.education-card {
+    width: calc(25% - 20px); /* Calculate width for 4 cards in a row with spacing */
+    margin: 0 10px; /* Adjust for spacing */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Background image styling */
+.card-background {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+/* Card content styling */
+.card-content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Opacity */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.intro-paragraph {
+    margin: 5px 10p 5px 0;
+    color: #666;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* about.css */
+
+/* Container styling */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section title styling */
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Skills row styling */
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Skill card styling */
+.skill-card {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skill image styling */
+.skill-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Skill details styling */
+.skill-details {
+    padding: 20px;
+}
+
+.skill-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 100%;
+    background-color: #007bff; /* Change color as needed */
+    border-radius: 5px;
+}
+
+/* Percentage styling */
+span {
+    font-size: 16px;
     color: #666;
 }
-    
+
