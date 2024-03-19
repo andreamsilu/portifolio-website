@@ -1,24 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css/navigation.css'; // Import styles for the navigation
-import logo from './images/logo192.png'; // Import your logo image
+import { Container, Navbar, Nav } from 'react-bootstrap';
+import logo from './images/logo192.png';
 
 const Navigation = () => {
     return (
-        <nav className="navigation">
-            <div className="left">
-                <Link to="/"><img src={logo} alt="Logo" /></Link>
-            </div>
-            <ul className="nav-links">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-            <div className="right login">
-                <Link to="/login">Login</Link>
-            </div>
-        </nav>
+        <Navbar bg="dark" variant="dark" expand="lg">
+            <Container>
+                <Navbar.Brand as={Link} to="/">
+                    <img
+                        src={logo}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        alt="Logo"
+                    />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mx-auto">
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/about">About</Nav.Link>
+                        <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+                        <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, ProgressBar } from 'react-bootstrap';
 import personalImage from '../components/images/developer-image.jpg';
-import '../css/about.css';
+// import '../css/about.css';
 
 const About = () => {
     return (
