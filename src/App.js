@@ -7,6 +7,8 @@ import Contact from './components/contact';
 import Navigation from './components/navigation'; 
 import Footer from './components/footer'; // Import the Footer component
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
     return (

@@ -1,29 +1,27 @@
-import React, { Component } from 'react';
-import '../css/home.css'; // Import your styling for Home page
-import profileImage from './images/developer-image.jpg'; // Import your profile image
+import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import profileImage from './images/developer-image.jpg'; // Import profile image
+import '../css/animation.css'; // Import your custom CSS for animations
 
-class Home extends Component {
-    render() {
-        return (
-            <div className="home-container">
-                <div className="card">
-                    <div className="card-bg">
-                        <img src={profileImage} alt="Profile" />
-                    </div>
-                    <div className="card-content">
-                        <h1>John Doe</h1>
-                        <p className="role">Full Stack Developer</p>
-                        <p className="tech-stack">Tech Stack: HTML, CSS, JavaScript, React</p>
-                        <div className="social-links">
-                            <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                            <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-                            <a href="mailto:johndoe@example.com"><i className="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
+const Home = () => {
+  return (
+    <Container>
+      <Row className="justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <Col md={6}>
+          <div className="animated fadeInDown"> {/* Apply animation class */}
+            <img src={profileImage} alt="Profile" className="img-fluid rounded-circle mb-4" />
+          </div>
+          <div className="animated fadeInUp"> {/* Apply animation class */}
+            <h1 className="text-center mb-4">Welcome to My Portfolio</h1>
+            <p className="text-center mb-4">I'm a software developer passionate about creating innovative solutions.</p>
+            <div className="text-center">
+              <Button variant="primary" href="./about.jsx">Learn More</Button>
             </div>
-        );
-    }
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
 export default Home;
