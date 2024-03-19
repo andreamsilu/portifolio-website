@@ -1,5 +1,5 @@
-// Projects.js
 import React, { Component } from 'react';
+import { Row, Col, Card, Button } from 'react-bootstrap';
 import '../css/projects.css'; // Import styles for the Projects component
 import projectImage1 from '../components/images/developer-image.jpg';
 
@@ -8,90 +8,52 @@ class Projects extends Component {
         return (
             <div className="projects-container">
                 <h2>Projects</h2>
-                <div className="project-row">
-                    <div className="project-card">
-                         <div className="project-title">
-                                <h3>Project 1</h3>
-                            </div>
-                        <div className="card-content">
-                            <img src={projectImage1} alt="Project 1" />
-                            <div className="overlay">
-                                <h3>Project 1</h3>
-                                <button className="view-project">View Project</button>
-                            </div>
-                        </div>
-                    </div>
+                <Row>
+                    <Col md={4}>
+                        <Card className="project-card">
+                            <Card.Body>
+                                <div className="project-title">
+                                    <Card.Title>Project 1</Card.Title>
+                                </div>
+                                <Card.Img variant="top" src={projectImage1} alt="Project 1" />
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="primary">View Project</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                    <div className="project-card">
-                         <div className="project-title">
-                                <h3>Project 1</h3>
-                            </div>
-                        <div className="card-content">
-                            <img src={projectImage1} alt="Project 1" />
-                            <div className="overlay">
-                                <h3>Project 1</h3>
-                                <button className="view-project">View Project</button>
-                            </div>
-                        </div>
-                    </div>
+                    <Col md={4}>
+                        <Card className="project-card">
+                            <Card.Body>
+                                <div className="project-title">
+                                    <Card.Title>Project 2</Card.Title>
+                                </div>
+                                <Card.Img variant="top" src={projectImage1} alt="Project 2" />
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="primary">View Project</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                    <div className="project-card">
-                         <div className="project-title">
-                                <h3>Project 1</h3>
-                            </div>
-                        <div className="card-content">
-                            <img src={projectImage1} alt="Project 1" />
-                            <div className="overlay">
-                                <h3>Project 1</h3>
-                                <button className="view-project">View Project</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="project-card">
-                         <div className="project-title">
-                                <h3>Project 1</h3>
-                            </div>
-                        <div className="card-content">
-                            <img src={projectImage1} alt="Project 1" />
-                            <div className="overlay">
-                                <h3>Project 1</h3>
-                                <button className="view-project">View Project</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className="project-card">
-                         <div className="project-title">
-                                <h3>Project 1</h3>
-                            </div>
-                        <div className="card-content">
-                            <img src={projectImage1} alt="Project 1" />
-                            <div className="overlay">
-                                <h3>Project 1</h3>
-                                <button className="view-project">View Project</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className="project-card">
-                         <div className="project-title">
-                                <h3>Project 1</h3>
-                            </div>
-                        <div className="card-content">
-                            <img src={projectImage1} alt="Project 1" />
-                            <div className="overlay">
-                                <h3>Project 1</h3>
-                                <button className="view-project">View Project</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    {/* Add more project cards */}
-                </div>
+                    <Col md={4}>
+                        <Card className="project-card">
+                            <Card.Body>
+                                <div className="project-title">
+                                    <Card.Title>Project 3</Card.Title>
+                                </div>
+                                <Card.Img variant="top" src={projectImage1} alt="Project 3" />
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="primary">View Project</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
             </div>
         );
     }

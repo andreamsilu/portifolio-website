@@ -1,6 +1,18 @@
 import React from 'react';
 import { Container, Row, Col, Card, ProgressBar } from 'react-bootstrap';
-import personalImage from '../components/images/developer-image.jpg';
+import personalImage from '../components/images/baba.jpg';
+import kibitiImage from '../components/images/kibiti.jpeg';
+import kibahaImage from '../components/images/kibaha.jpeg';
+import udsmImage from '../components/images/udsm.jpeg';
+import reactImage from '../components/images/logo192.png';
+import flutterImage from '../components/images/flutter.png';
+import laravelImage from '../components/images/laravel.png';
+import nodejsImage from '../components/images/nodejs.png';
+
+
+
+
+
 // import '../css/about.css';
 
 const About = () => {
@@ -45,7 +57,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} sm={6} md={3}>
                         <Card className="education-card">
-                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Img variant="top" src={kibahaImage} />
                             <Card.Body>
                                 <Card.Title>Ordinary Education</Card.Title>
                                 <Card.Text>
@@ -58,7 +70,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} sm={6} md={3}>
                         <Card className="education-card">
-                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Img variant="top" src={kibitiImage} />
                             <Card.Body>
                                 <Card.Title>Advanced Education</Card.Title>
                                 <Card.Text>
@@ -71,7 +83,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} sm={6} md={3}>
                         <Card className="education-card">
-                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Img variant="top" src={udsmImage} />
                             <Card.Body>
                                 <Card.Title>University Education</Card.Title>
                                 <Card.Text>
@@ -92,7 +104,7 @@ const About = () => {
                 <Row>
                     <Col xs={12} sm={6} md={3}>
                         <Card className="skill-card">
-                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Img variant="top" src={reactImage} />
                             <Card.Body>
                                 <Card.Title>Reactjs</Card.Title>
                                 <ProgressBar now={70} label="70%" />
@@ -101,7 +113,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} sm={6} md={3}>
                         <Card className="skill-card">
-                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Img variant="top" src={flutterImage} />
                             <Card.Body>
                                 <Card.Title>Flutter</Card.Title>
                                 <ProgressBar now={90} label="90%" />
@@ -110,7 +122,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} sm={6} md={3}>
                         <Card className="skill-card">
-                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Img variant="top" src={laravelImage} />
                             <Card.Body>
                                 <Card.Title>PHP/Laravel</Card.Title>
                                 <ProgressBar now={85} label="85%" />
@@ -119,7 +131,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} sm={6} md={3}>
                         <Card className="skill-card">
-                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Img variant="top" src={nodejsImage} />
                             <Card.Body>
                                 <Card.Title>Nodejs/Expressjs</Card.Title>
                                 <ProgressBar now={90} label="90%" />

@@ -8,6 +8,7 @@ import Navigation from './components/navigation';
 import Footer from './components/footer'; // Import the Footer component
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './components/login';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
                     <Route path="/about" element={<About />} /> 
                     <Route path="/projects" element={<Projects />} /> 
                     <Route path="/contact" element={<Contact />} /> 
+                    <Route path="/login" element={<Login />} /> 
+
                 </Routes>
                 <Footer /> {/* Include the Footer component */}
             </div>
