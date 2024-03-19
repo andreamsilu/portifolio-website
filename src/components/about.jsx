@@ -1,126 +1,141 @@
-// About.js
-import React, { Component } from 'react';
-import '../css/about.css'; // Import your styling for the About page
+import React from 'react';
+import { Container, Row, Col, Card, ProgressBar } from 'react-bootstrap';
 import personalImage from '../components/images/developer-image.jpg';
-class About extends Component {
-    render() {
-        return (
-            <div className="about-container">
-                <section className="about-section">
-                    <h2 className="section-title">About Myself</h2>
-                    <div className="about-content">
-                        <div className="image-container">
-                        <img src={personalImage} alt="personal pic" />
-                        </div>
+import '../css/about.css';
+
+const About = () => {
+    return (
+        <Container className="about-container">
+            <section className="about-section">
+                <h2 className="section-title">About Myself</h2>
+                <Row>
+                    <Col xs={12} md={6}>
+                        <Card>
+                            <Card.Img variant="top" src={personalImage} alt="personal pic" />
+                            <Card.Body>
+                                <Card.Text>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan urna at felis egestas...
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} md={6}>
                         <div className="content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan urna at felis egestas...</p>
                         </div>
-                    </div>
-                </section>
+                    </Col>
+                </Row>
+            </section>
 
+            <section className="education-section">
+                <h2 className='section-title'>Education</h2>
+                <Row>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="education-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>Primary Education</Card.Title>
+                                <Card.Text>
+                                    School: Kiponzelo Primary <br />
+                                    Location: Iringa, Tz <br />
+                                    Year: 2007 - 2013
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="education-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>Ordinary Education</Card.Title>
+                                <Card.Text>
+                                    School: Kibaha Sec School <br />
+                                    Subjects Category: Science <br/>
+                                    Year: 2014 - 2017
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="education-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>Advanced Education</Card.Title>
+                                <Card.Text>
+                                    School : Kibiti High School <br />
+                                    Combination: PCM <br/>
+                                    Location: Coast Region, Tz
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="education-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>University Education</Card.Title>
+                                <Card.Text>
+                                    University: UDSM(CoICT) <br />
+                                    Bachelor: Computer Science<br/>
+                                    Year:2020-2023
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    {/* Add more education cards here */}
+                </Row>
+            </section>
 
-                <section className="education-section">
-                    <h2 className='section-title'>Education</h2>
-                    <div className="education-row">
-                        <div className="education-card">
-                            <div className="card-background" style={{ backgroundImage: `url(${personalImage})` }}>
-                                <div className="card-content">
-                                    <h3>Primary Education</h3>
-                                    <p>School Name: Kiponzelo Primary School</p>
-                                    <p>Location:Iringa, Tz</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="education-card">
-                            <div className="card-background" style={{ backgroundImage: `url(${personalImage})` }}>
-                                <div className="card-content">
-                                    <h3>O'Level Education</h3>
-                                    <p>School Name: Kibaha Sec School</p>
-                                    <p>Location:Pwani, Tz</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="education-card">
-                            <div className="card-background" style={{ backgroundImage: `url(${personalImage})` }}>
-                                <div className="card-content">
-                                    <h3>A'level Education</h3>
-                                    <p>School Name: Kibiti High School</p>
-                                    <p>Combination:PCM</p>
-                                    <p>Location:Pwani, Tz</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="education-card">
-                            <div className="card-background" style={{ backgroundImage: `url(${personalImage})` }}>
-                                <div className="card-content">
-                                    <h3>University Education</h3>
-                                    <p>University: UDSM</p>
-                                    <p>Degree:Computer Science.</p>
-                                    <p>Location: DSM, Tz</p>
-                                </div>
-                            </div>
-                        </div>
-                        {/* Repeat the card structure for other education levels */}
-                    </div>
-                </section>
+            <section className="skills-section">
+                <h2 className='section-title'>Skills</h2>
+                <p className='intro-paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan urna at felis egestas...</p>
+                <Row>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="skill-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>Reactjs</Card.Title>
+                                <ProgressBar now={70} label="70%" />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="skill-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>Flutter</Card.Title>
+                                <ProgressBar now={90} label="90%" />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="skill-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>PHP/Laravel</Card.Title>
+                                <ProgressBar now={85} label="85%" />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} sm={6} md={3}>
+                        <Card className="skill-card">
+                            <Card.Img variant="top" src={personalImage} />
+                            <Card.Body>
+                                <Card.Title>Nodejs/Expressjs</Card.Title>
+                                <ProgressBar now={90} label="90%" />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    {/* Add more skill cards here */}
+                </Row>
+            </section>
 
-                <section className="skills-section">
-                    <h2 className='section-title'> Skills</h2>
-                    <p className='intro-paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan urna at felis egestas...</p>
-                    <div className="skills-row">
-                        <div className="skill-card">
-                            <img src={personalImage} alt="Skill 1" />
-                            <div className="skill-details">
-                                <h3>Reactjs</h3>
-                                <div className="progress-bar">
-                                    <div className="progress" style={{ width: '100%' }}></div>
-                                </div>
-                                <span>100%</span>
-                            </div>
-                        </div>
-
-                        <div className="skill-card">
-                            <img src={personalImage} alt="Skill 1" />
-                            <div className="skill-details">
-                                <h3>Flutter</h3>
-                                <div className="progress-bar">
-                                    <div className="progress" style={{ width: '90%' }}></div>
-                                </div>
-                                <span>90%</span>
-                            </div>
-                        </div>
-
-                        <div className="skill-card">
-                            <img src={personalImage} alt="Skill 1" />
-                            <div className="skill-details">
-                                <h3>Nodejs</h3>
-                                <div className="progress-bar">
-                                    <div className="progress" style={{ width: '80%' }}></div>
-                                </div>
-                                <span>80%</span>
-                            </div>
-                        </div>
-
-                        <div className="skill-card">
-                            <img src={personalImage} alt="Skill 1" />
-                            <div className="skill-details">
-                                <h3>Laravel</h3>
-                                <div className="progress-bar">
-                                    <div className="progress" style={{ width: '99%' }}></div>
-                                </div>
-                                <span>99    %</span>
-                            </div>
-                        </div>
-                        {/* Repeat the card structure for other skills */}
-                    </div>
-                </section>
-                <section className="exp-section">
-                    <h2 className='section-title'>Experience</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan urna at felis egestas...</p>
-                </section>
-            </div>
-        );
-    }
+            <section className="exp-section">
+                <h2 className='section-title'>Experience</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan urna at felis egestas...</p>
+            </section>
+        </Container>
+    );
 }
 
 export default About;
